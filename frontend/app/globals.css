@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-mitra-mono: "BMitra", sans-serif;
+  --font-mitra-bold: "BMitraBold", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  --font-mitra-mono: "BMitra", sans-serif;
+  --font-mitra-bold: "BMitraBold", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom Scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Add these styles to your CSS file or inside a <style> tag */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes backgroundGreen {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #d1e7dd; /* Light green background */
+  }
+}
+
+.done-animation {
+  animation: backgroundGreen 1s forwards;
+}
+
+.delete-animation {
+  animation: fadeOut 1s forwards;
+}
